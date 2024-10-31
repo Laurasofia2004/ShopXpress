@@ -18,7 +18,8 @@ class ProductController extends Controller
         // Obtiene todos los productos con paginación de 10 elementos por página
         $products = Product::paginate(10);
 
-        return view('products.index', compact('products'));
+        // Devuelve la vista 'products.index' y pasa los productos
+        return view('admin.products.index');
     }
 
     /**
